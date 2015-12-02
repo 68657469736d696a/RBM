@@ -1,0 +1,8 @@
+Package: rbm
+Type: Package
+Date: 2015-02-09
+Author: Sam Verkoelen
+Title: Train and use (a stack of) Restricted Boltzmann Machines
+Version: 0.1
+Description: Train and use (a stack of) Restricted Boltzmann Machines
+Depends: R (>= 3.1.2)
