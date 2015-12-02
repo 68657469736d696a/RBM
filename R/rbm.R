@@ -107,7 +107,7 @@ single.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_si
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- stack.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57
@@ -128,7 +128,7 @@ single.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_si
 #' reconstruction <- t(reconstruction[16:1, 1:16]) #correct orientation
 #' image(reconstruction, col = grey(seq(0, 1, 0.001)), main = 'Reconstruction')
 #' @export
-stack.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_size=100, momentum=0.9, verbose=T){
+multi.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_size=100, momentum=0.9, verbose=T){
   #Just checking
   if (length(hidden) <= 1) { stop("Please use single.rbm for training a single layer") }
 
@@ -154,7 +154,7 @@ stack.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_siz
 
 #' Retrieve features from a dataset
 #'
-#' @param model an RBM object from the single.rbm or stack.rbm functions
+#' @param model an RBM object from the single.rbm or multi.rbm functions
 #' @param data matrix with input data
 #'
 #' @return a matrix with fatures
@@ -164,7 +164,7 @@ stack.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_siz
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- stack.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57
@@ -200,7 +200,7 @@ up.rbm <- function(model, data){
 
 #' Reconstruct original data using features
 #'
-#' @param model an RBM object from the single.rbm or stack.rbm functions
+#' @param model an RBM object from the single.rbm or multi.rbm functions
 #' @param data matrix with features
 #'
 #' @return a matrix with reconstructions of the input features
@@ -210,7 +210,7 @@ up.rbm <- function(model, data){
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- stack.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57

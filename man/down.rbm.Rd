@@ -7,7 +7,7 @@
 down.rbm(model, data)
 }
 \arguments{
-\item{model}{an RBM object from the single.rbm or stack.rbm functions}
+\item{model}{an RBM object from the single.rbm or multi.rbm functions}
 
 \item{data}{matrix with features}
 }
@@ -22,7 +22,7 @@ Reconstruct original data using features
 data <- as.matrix(read.csv('mnist_sample.csv'));
 
 #train RBM stack
-model <- stack.rbm (hidden = c(150, 75, 30), data = train)
+model <- multi.rbm (hidden = c(150, 75, 30), data = train)
 
 par(mfrow=c(1,2))
 id <- 57
