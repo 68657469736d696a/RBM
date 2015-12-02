@@ -107,7 +107,7 @@ single.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_si
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = data)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57
@@ -164,7 +164,7 @@ multi.rbm <- function(hidden, data, learning_rate = .1, epochs = 1000, batch_siz
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = data)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57
@@ -210,7 +210,7 @@ up.rbm <- function(model, data){
 #' data <- as.matrix(read.csv('mnist_sample.csv'));
 #' 
 #' #train RBM stack
-#' model <- multi.rbm (hidden = c(150, 75, 30), data = train)
+#' model <- multi.rbm (hidden = c(150, 75, 30), data = data)
 #' 
 #' par(mfrow=c(1,2))
 #' id <- 57

@@ -22,7 +22,7 @@ Reconstruct original data using features
 data <- as.matrix(read.csv('mnist_sample.csv'));
 
 #train RBM stack
-model <- multi.rbm (hidden = c(150, 75, 30), data = train)
+model <- multi.rbm (hidden = c(150, 75, 30), data = data)
 
 par(mfrow=c(1,2))
 id <- 57
